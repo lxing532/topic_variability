@@ -21,3 +21,10 @@ Once the sampling process is done, run topwords_posterior_avg.py to get top10 to
 python topwords_posterior_avg.py data/input.txt
 ```
 
+## Topic Variability Computation
+First run the file "topwords_posterior_doc.py" under the folder lda, before running this code, please first change the variable "topicNum" and "docNum" in the file to the same as your data, these two variables are hard coded in the code:
+```
+python topwords_posterior_doc.py data/input.txt
+```
+It will generate two files "topic_vec.txt" and "topic_var.txt" under the same folder. topic_vec.txt contains the LDA topic vector for each doc, topic_var.txt contains the corresponding topic distribution variance for each doc.
+
