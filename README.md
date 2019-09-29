@@ -16,5 +16,8 @@ It will run the model for 2000 iterations (-iters) with 50 topics (-Z), -iters a
 
 The recorded gibbs samplers are saved under the data folder in files ending in .assign, which contains the original input but the topic assignment for each word is appended after the word (for example, "student:39" means this word token was assigned to topic 39 in the current iteration of the Gibbs sampler).
 
-Once the sampling process is done, run topwords_posterior_avg.py:
+Once the sampling process is done, run topwords_posterior_avg.py to get top10 topic words and their probability for each topic:
+```
+python topwords_posterior_avg.py data/input.txt
+```
 
