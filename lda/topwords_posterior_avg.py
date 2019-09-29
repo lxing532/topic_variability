@@ -59,51 +59,30 @@ topicWordDict = {}
 completeWTDict = [[] for i in range(Z)]
 for z in range(Z):
 	topicWordDict[z] = []
-	print("Topic %d\n" % (z+1))
 
-	for word in count[z]:
-		count[z][word] /= float(total[z])
-	#####
-	for word in wordList:
-		if word in count[z].keys():
-			completeWTDict[z].append(count[z][word])
-		else:
-			completeWTDict[z].append(0)
-	#####
+	if z  in count.keys():
+		print("Topic %d\n" % (z+1))
+		for word in count[z]:
+			count[z][word] /= float(total[z])
+		#####
+		for word in wordList:
+			if word in count[z].keys():
+				completeWTDict[z].append(count[z][word])
+			else:
+				completeWTDict[z].append(0)
+		#####
 
-	w = 0
-	words = sorted(count[z].items(), key=itemgetter(1), reverse=True)
-	print(len(words))
-	for word, v in words:
-		topicWordDict[z].append(word)
-		print(word, '%0.2f' % v)
-		
-		w += 1
-		if w >= 10: break
-		
-	print("\n")
+		w = 0
+		words = sorted(count[z].items(), key=itemgetter(1), reverse=True)
+		for word, v in words:
+			topicWordDict[z].append(word)
+			print(word, '%0.2f' % v)
+			
+			w += 1
+			if w >= 10: break
+			
+		print("\n")
 
-	######
-
-
-	######
-'''
-f = open('/Users/xinglinzi/Desktop/6_topicModels/11000/4/4_details.txt','w+')
-for k,v in topicWordDict.items():
-	f.write(str(k)+' ')
-	for i in v:
-		f.write(i+' ')
-	f.write('\n')
-f.close()
-
-
-f = open('/Users/xinglinzi/Desktop/6_topicModels/11000/4/4.txt','w+')
-for z in completeWTDict:
-	for i in z:
-		f.write(str(i)+' ')
-	f.write('\n')
-f.close()
-'''
 
 
 
