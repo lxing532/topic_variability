@@ -33,3 +33,6 @@ The last step ot generate topic variability is running the file "metric_generati
 python metric_generation.py
 ```
 It will generate a .txt file named "text_variability.txt", which contains the values of topic variability for all topics. They can be seen as the assessment of topic quality.
+
+## Data
+We release the evaluations of the topics generated from three corpora we used in our paper. The human rating process and all the details of metrics can be found in our paper.
