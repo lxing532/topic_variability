@@ -1,5 +1,5 @@
 # Topic Variability
-This repository maintain the code and datasets for topic variability, which is a novel and effective metric for topic quality evaluation.
+This repository maintain the source code and data for topic variability, which is a novel and effective metric for topic quality evaluation. This work is published at "[Evaluating Topic Quality with Posterior Variability](https://arxiv.org/abs/1909.03524)", EMNLP-IJCNLP 2019.
 
 ## Run LDA
 The topic variability is driven from the posterior distributions of Gibbs sampling process. Hence, our LDA implementation will start recording the gibbs samplers every 10 iterations, after 1,000 burn-in iterations. All the code for LDA is under "lda" folder
