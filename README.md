@@ -28,3 +28,8 @@ python topwords_posterior_doc.py data/input.txt
 ```
 It will generate two files "topic_vec.txt" and "topic_var.txt" under the same folder. topic_vec.txt contains the LDA topic vector for each doc, topic_var.txt contains the corresponding topic distribution variance for each doc.
 
+The last step ot generate topic variability is running the file "metric_generation.py", which is outside of lda folder. Make sure you also change the value of topic number in the code to your case:
+```
+python metric_generation.py
+```
+It will generate a .txt file named "text_variability.txt", which contains the values of topic variability for all topics. They can be seen as the assessment of topic quality.
